@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root{
+    --main-color: rgb(158, 189, 160);
+    --p-size: 1.2rem;
+    --h2-size: 5rem;
+    --h3-size: 3rem;
+    --color: rgb(48, 49, 47);
+}
+
+::selection{
+    color: antiquewhite;
+    background-color: rgb(158, 189, 160);
+}
+
+menu{
+    background: rgba(255, 255, 255, 0.891);
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+menu h1{
+    margin-left: 50px;
+}
+menu nav{
+    display: flex;
+    justify-content: right;
+    margin-right: 40px;
+    width: 75%;
+}
+
+menu nav ul{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+menu nav ul li{
+    list-style: none;
+}
+
+menu nav ul li a{
+    text-decoration: none;
+    color: var(--color);
+    font-size:var(--p-size);
+    transition: .3s;
+}
+
+menu nav ul li a:hover{
+    color: var(--main-color);
+}
+
+.inicial{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#img-inicial{
+    width: 45%;
+    height: inherit;
+}
+
+.inicial-apres{
+    width:  55%;
+    height: 100vh;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: center;
+    padding: 0 100px;
+    flex-direction: column;
+}
+
+.inicial-apres h2{
+    color: var(--color);
+    font-size: var(--h2-size);
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.inicial-apres h3{
+    color: rgb(65, 56, 56);
+    margin-bottom: 50px;
+    font-weight: 100;
+}
+
+.inicial-apres h3::before{
+    content: "____ ";
+    position: relative;
+    bottom: 6px;
+    color: rgb(88, 71, 70);
+}
+
+.inicial-apres p{
+    color: var(--color);
+    font-size: var(--p-size);
+    text-align: justify;
+    line-height: 30px;
+}
+
+.especial{
+    max-width: 100%;
+    background-color: rgb(218, 226, 219);
+    display: flex;
+}
+
+.especial-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+}
+
+.especial-left h2{
+    margin-top: 100px;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.especial-left h3{
+    margin-top: 50px;
+    font-weight: 300;
+}
+
+.especial-right{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+    text-align: justify;
+    color: var(--color);
+    
+}
+
+.especial-right p{
+    line-height: 30px;
+    font-size: var(--p-size);
+}
+.especial-right a{
+    color: beige;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(158, 182, 177);
+    width: 10rem;
+    height: 2.5rem;
+    margin-top: 50px;
+    transition: .5s;
+}
+
+.especial-right a:hover{
+    color: var(--color);
+    background-color: rgb(134, 170, 127);
+}
+
+.contact{
+    width: 100%;
+    display: flex;
+    background-color: rgb(241, 243, 243);
+    align-items: end;
+}
+
+.contact img{
+    width:40%;
+    height: 100%;
+}
+
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    padding: 100px;
+}
+
+.contact-right h3{
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--color);
+    margin-bottom: 50px;
+}
+
+.contact-right p{
+    text-align: justify;
+    margin-bottom: 50px;
+    font-size: var(--p-size);
+    font-weight: 300;
+    color: var(--color);
+    line-height: 30px;
+}
+
+.contact-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.contact-list ul li{
+    color: var(--color);
+    font-size: var(--p-size);
+    list-style: none;
+    line-height: 30px;
+}
+
+.form-contact{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40px 100px 40px;
+    grid-template-areas: 
+    "name email"
+    "texto texto"
+    "enviar enviar";
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+#name{
+    grid-area: name;
+}
+
+#email{
+    grid-area: email;
+}
+
+#texto{
+    grid-area: texto;
+}
+
+#name, #email, #texto{
+    border: 1px solid rgba(182, 182, 182, 0.603);
+    outline: none;
+    padding: 0 2%;
+    display: flex;
+    align-items: start;
+}
+#enviar{
+    grid-area: enviar;
+    color: white;
+    background-color: rgb(159, 174, 180);
+    border: none;
+    transition: .3s;
+    font-size: var(--p-size);
+}
+
+#enviar:hover{
+    background-color: rgb(130, 143, 148);
+}
+
+footer{
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(68, 63, 63);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--p-size);
+    color: rgb(219, 218, 218);
+}
