@@ -35,13 +35,13 @@ menu{
 menu nav{
     display: flex;
     justify-content: right;
-    width: 75%;
+    min-width: 75%;
 }
 
 menu nav ul{
     width: inherit;
     display: flex;
-    justify-content: space-between;
+    gap: 25px;
 }
 
 menu nav ul li{
@@ -83,7 +83,6 @@ menu nav ul li a:hover{
 
 .inicial{
     width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -95,7 +94,6 @@ menu nav ul li a:hover{
 
 .inicial-apres{
     width:  55%;
-    height: 100vh;
     background-color: rgb(247, 247, 247);
     display: flex;
     justify-content: center;
@@ -131,7 +129,6 @@ menu nav ul li a:hover{
 
 .especial-left{
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     padding: 5% 10%;
@@ -305,17 +302,17 @@ footer{
         display: flex;
     }
 
-    #menu-nav{
+    menu nav{
+        display: none;
+    }
+
+    .menu-drop{
+        display: flex;
         position: fixed;
         top: 10vh; left: 3%;
         width: 100%;
     }
-
-    .menu-drop{
-        display: none;
-    }
     
-
     #nav-ul{
         display: flex;
         flex-direction: column;
@@ -346,4 +343,43 @@ footer{
         font-size: 1em;
     }
 
+}
+
+@media  screen and (max-width: 769px){
+    .inicial{
+        flex-direction: column;
+    }
+
+    #img-inicial{
+        min-width: 100%;
+    }
+
+    .inicial-apres{
+        min-width: 100%;
+    }
+
+    .especial{
+        flex-direction: column;
+    }
+
+    .especial-left{
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .especial-right{
+        min-width: 100%;
+    }
+
+    .contact{
+        flex-direction: column-reverse;
+    }
+
+    .contact-right{
+        min-width: 100%;
+    }
+
+    .contact img{
+        align-self: center;
+    }
 }
